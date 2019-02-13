@@ -1,0 +1,14 @@
+package ejm118_music1;
+import java.sql.*;
+import java.net.URL;
+public class musicTest {
+
+	public static void main(String[] args) 
+	{
+		
+		Song song = new Song("baracuda", "2011-04-25 00:00:00", "2011-04-25 00:00:00");
+		
+		song.deleteSong("84c401ca-9d2d-495f-b821-5c9e14c36172");
+		
+	}
+}

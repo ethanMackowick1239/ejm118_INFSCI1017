@@ -1,0 +1,15 @@
+127.0.0.1 - - [12/Feb/2019:12:04:36 -0500] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [12/Feb/2019:12:04:37 -0500] "GET /ejm118_music1/WEB-INF/classes/ejm118_music1/musicTest.java HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [12/Feb/2019:12:04:52 -0500] "GET /ejm118_music1/WEB-INF/classes/ejm118_music1/musicTest.java HTTP/1.1" 404 1047
+127.0.0.1 - - [12/Feb/2019:12:12:41 -0500] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [12/Feb/2019:12:12:42 -0500] "GET /ejm118_music1/WEB-INF/classes/ejm118_music1/musicTest.java HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [12/Feb/2019:12:30:49 -0500] "GET /ejm118_music1/WEB-INF/classes/ejm118_music1/musicTest.java HTTP/1.1" 404 1047
+127.0.0.1 - - [12/Feb/2019:12:33:25 -0500] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [12/Feb/2019:12:33:25 -0500] "GET /ejm118_music1/WEB-INF/classes/ejm118_music1/connectTest.java HTTP/1.1" 404 1047
+127.0.0.1 - - [12/Feb/2019:12:35:02 -0500] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [12/Feb/2019:12:35:02 -0500] "GET /ejm118_music1/WEB-INF/classes/ejm118_music1/connectTest.java HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [12/Feb/2019:12:37:43 -0500] "GET /ejm118_music1/WEB-INF/classes/ejm118_music1/connectTest.java HTTP/1.1" 404 1047
+127.0.0.1 - - [12/Feb/2019:12:38:38 -0500] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [12/Feb/2019:12:38:39 -0500] "GET /ejm118_music1/WEB-INF/classes/ejm118_music1/connectTest.java HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [12/Feb/2019:12:56:09 -0500] "GET /ejm118_music1/WEB-INF/classes/ejm118_music1/Song.java HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [12/Feb/2019:13:50:09 -0500] "GET /ejm118_music1/WEB-INF/classes/ejm118_music1/Song.java HTTP/1.1" 404 1047

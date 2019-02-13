@@ -1,0 +1,30 @@
+
+public class genre 
+{
+	private int genreID;
+	private String genreName;
+	private String description;
+	
+	public Genre(int genreID)
+	{
+		this.genreID = genreID;
+	}
+	
+	public String getGenreName() {
+		return genreName;
+	}
+	public void setGenreName(String genreName) {
+		DbUtilities db = new DbUtilities();
+		String sql = "UPDATE genre SET genre_name = '" + genreName + "'WHERE genre_id;";
+		this.genreName = genreName;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public int getGenreID() {
+		return genreID;
+	}
+}

@@ -1,0 +1,97 @@
+package ejm118_music1;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Song {
+	private String songID;
+	private String title;
+	private int length;
+	private String filePath;
+	private String releaseDate;
+	private String recordDate;
+	private List<Artist> songArtist = new ArrayList<Artist>();
+	
+	
+	public Song (String title, String releaseDate, String recordDate)
+	{
+		
+	}
+	
+	public Song(String songID)
+	{
+		
+	}
+	
+	public void deleteSong(String songID)
+	{
+		
+	}
+	
+	public void addArtist(String artistID)
+	{
+		
+	}
+	
+	public void deleteArtist(Artist artist)
+	{
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		
+		DbUtilities db = new DbUtilities();
+		String sql = "UPDATE genre SET genre_name = '" + title + "'WHERE genre_id = " + this.title + ";";
+		this.title = title;		
+		db.executeQuery(sql);
+		
+	}
+	public int getLength() {
+		return length;
+	}
+	public void setLength(int length) {
+		this.length = length;
+	}
+	public String getFilePath() {
+		return filePath;
+	}
+	public void setFilePath(String filePath) {
+		this.filePath = filePath;
+	}
+	public String getReleaseDate() {
+		return releaseDate;
+	}
+	public void setReleaseDate(String releaseDate) {
+		this.releaseDate = releaseDate;
+	}
+	public String getRecordDate() {
+		return recordDate;
+	}
+	public void setRecordDate(String recordDate) {
+		this.recordDate = recordDate;
+	}
+	public String getSongID() {
+		return songID;
+	}
+	
+	
+	
+}

@@ -1,0 +1,140 @@
+package ejm118_music1;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Album {
+	private String albumID;
+	private String title;
+	private String releaseDate;
+	private String coverImagePath;
+	private String recordingCompany;
+	private int numberOfTracks;
+	private String pmrcRating;
+	private int length;
+	private List<Album> albumSongs = new ArrayList<Album>();
+	
+	public Album(String title, String releaseDate, String recordingCompany, String numberOfTracks, String pmrcRating, int length)
+	{
+		String sql = "INSERT INTO album (title, release_date, recording_company, number_of_tracks,pmrc_rating, length, album_id)"
+				+ " VALUES ('" + title + "' , '" + releaseDate + "' , '" + recordingCompany + "' , '" + numberOfTracks + "' , '" + pmrcRating + "' , '" + length + "' , '" + albumID + "');";
+
+	}
+	
+	public Album(String albumID)
+	{
+		
+	}
+	
+	public void deleteAlbum(String albumID)
+	{
+		
+	}
+	
+	public void addSong(Song song)
+	{
+		
+	}
+	
+	public void deleteSong(String songID)
+	{
+		
+	}
+	
+	public void deleteSong(Song song)
+	{
+		
+	}
+	
+	
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		DbUtilities db = new DbUtilities();
+		String sql = "UPDATE album SET title = '" + title + "'WHERE album_id = " + this.albumID + ";";
+		this.title = title;	
+		db.executeQuery(sql);	
+	}
+
+	public String getReleaseDate() {
+		return releaseDate;
+	}
+
+	public void setReleaseDate(String releaseDate) {
+		DbUtilities db = new DbUtilities();
+		String sql = "UPDATE album SET release_date = '" + releaseDate + "'WHERE album_id = " + this.albumID + ";";
+		this.releaseDate = releaseDate;	
+		db.executeQuery(sql);
+	}
+
+	public String getCoverImagePath() {
+		return coverImagePath;
+	}
+
+	public void setCoverImagePath(String coverImagePath) {
+		DbUtilities db = new DbUtilities();
+		String sql = "UPDATE album SET cover_image_path = '" + coverImagePath + "'WHERE album_id = " + this.albumID + ";";
+		this.coverImagePath = coverImagePath;	
+		db.executeQuery(sql);
+	}
+
+	public String getRecordingCompany() {
+		return recordingCompany;
+	}
+
+	public void setRecordingCompany(String recordingCompany) {
+		DbUtilities db = new DbUtilities();
+		String sql = "UPDATE album SET recording_company = '" + recordingCompany + "'WHERE album_id = " + this.albumID + ";";
+		this.recordingCompany = recordingCompany;	
+		db.executeQuery(sql);
+	}
+
+	public int getNumberOfTracks() {
+		return numberOfTracks;
+	}
+
+	public void setNumberOfTracks(int numberOfTracks) {
+		DbUtilities db = new DbUtilities();
+		String sql = "UPDATE album SET number_of_tracks = '" + numberOfTracks + "'WHERE albumI_id = " + this.albumID + ";";
+		this.numberOfTracks = numberOfTracks;	
+		db.executeQuery(sql);
+	}
+
+	public String getPmrcRating() {
+		return pmrcRating;
+	}
+
+	public void setPmrcRating(String pmrcRating) {
+		DbUtilities db = new DbUtilities();
+		String sql = "UPDATE album SET pmrc_rating = '" + pmrcRating + "'WHERE album_id = '" + this.albumID + "';";
+		this.pmrcRating = pmrcRating;	
+		db.executeQuery(sql);
+	}
+
+	public int getLength() {
+		return length;
+	}
+
+	public void setLength(int length) {
+		DbUtilities db = new DbUtilities();
+		String sql = "UPDATE album SET length = '" + length + "'WHERE album_id = '" + this.albumID + "';";
+		System.out.println(sql);
+		this.length = length;	
+		db.executeQuery(sql);
+	}
+
+	public List<Album> getAlbumSongs() {
+		return albumSongs;
+	}
+
+
+	public String getAlbumID() {
+		return albumID;
+	}
+			
+
+
+}

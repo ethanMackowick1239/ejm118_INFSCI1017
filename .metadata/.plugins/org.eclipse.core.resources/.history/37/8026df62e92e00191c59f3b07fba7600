@@ -1,0 +1,10 @@
+package ejm118_music1;
+import java.sql.*;
+import java.net.URL;
+public class musicTest {
+
+	public static void main(String[] args) 
+	{
+		Song song1 = new Song("Dazed and Confused", "1969", "1969");
+	}
+}

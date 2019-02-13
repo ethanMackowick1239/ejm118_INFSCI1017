@@ -1,0 +1,102 @@
+package ejm118_music1;
+
+import java.util.UUID;
+
+public class Artist {
+
+	private String artistID;
+	private String firstName;
+	private String lastName;
+	private String bandName;
+	private String bio; 
+	private DbUtilities db;
+	
+	
+	//Constructor that intitiates an object with an inputted firstname, last name, band name, and generates a unique id
+	public Artist(String firstName, String lastName, String bandName)
+	{
+		artistID = UUID.randomUUID().toString().replaceAll("-", "");
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.bandName = bandName;
+		
+		db = new DbUtilities();
+		String sql = "INSERT INTO artist (first_name, last_name, band_name, artist_id) VALUES ('" + lastName + "' , '" + firstName + "' , '" + bandName + "' , '" + artistID + "');";
+		System.out.println(sql);
+		db.executeQuery(sql);
+	}
+	
+	//creates an artist object using a specific artistID
+	public Artist(String artistID)
+	{
+		this.artistID = artistID;
+		db = new DbUtilities();	
+	}
+	
+	//delets a row from the artist table in db using a specific artistID
+	public void deletArtist(String artistID)
+	{
+		db = new DbUtilities();
+		String sql = "DELETE FROM artist WHERE (artist_id = '" + artistID + "');";
+		System.out.println(sql);
+		db.executeQuery(sql);
+	}
+	
+	
+
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		DbUtilities db = new DbUtilities();
+		String sql = "UPDATE artist SET first_Name = '" + firstName + "'WHERE artist_id = '" + this.artistID + "';";
+		this.firstName = firstName;	
+		db.executeQuery(sql);
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		DbUtilities db = new DbUtilities();
+		String sql = "UPDATE artist SET last_Name = '" + lastName + "'WHERE artist_id = '" + this.artistID + "';";
+		this.lastName = lastName;	
+		db.executeQuery(sql);	
+		}
+	
+
+	public String getBandName() {
+		return bandName;
+	}
+
+	public void setBandName(String bandName) {
+		DbUtilities db = new DbUtilities();
+		String sql = "UPDATE artist SET band_Name = '" + bandName + "'WHERE artist_id = '" + this.artistID + "';";
+		this.bandName = bandName;	
+		db.executeQuery(sql);	
+		}
+
+	public String getBio() {
+		return bio;
+	}
+
+	public void setBio(String bio) {
+		DbUtilities db = new DbUtilities();
+		String sql = "UPDATE artist SET bio = '" + bio + "'WHERE artist_id = '" + this.artistID + "';";
+		this.bio = bio;	
+		db.executeQuery(sql);	
+	}
+
+	public String getArtisitID() {
+		return artistID;
+	}
+	
+	
+	
+	
+	
+	
+}
