@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Album> 
+	<albumID>1</albumID>
+	<title>blah</title>
+	<releaseDate>Your momma</releaseDate>
+	<coverImagePath>you kno</coverImagePath>
+	<recordingCompany>Atlantic</recordingCompany>
+	<numberOfTracks>3</numberOfTracks>
+	<pmrcRating>shit</pmrcRating>
+	<length>4</length>
+	<albumSongs>
+		<song>
+			<songID> 2</songID>
+			<title> blah</title>
+			<length> 4</length>
+			<filePath> c://</filePath>
+			<releaseDate> yuads</releaseDate>
+			<recordDate> who cares</recordDate>
+		</song>
+	</albumSongs>
+	
+</Album>

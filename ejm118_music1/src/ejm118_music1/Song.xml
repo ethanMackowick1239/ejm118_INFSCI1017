@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Song>
+	<songID> 2</songID>
+	<title> blah</title>
+	<length> 4</length>
+	<filePath> c://</filePath>
+	<releaseDate> yuads</releaseDate>
+	<recordDate> who cares</recordDate>
+	
+	<songArists>
+		<Artists>
+			<artistID> 2</artistID>
+			<firstName>John</firstName>
+			<lastName>Five</lastName>
+			<bandName> Rob Zombie</bandName>
+			<bio> he goes roar</bio>
+		</Artists>
+	</songArists>
+	
+</Song>

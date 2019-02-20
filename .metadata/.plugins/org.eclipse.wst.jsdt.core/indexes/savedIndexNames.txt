@@ -1,8 +1,4 @@
 INDEX VERSION 1.4+C:\Users\Ethan\Documents\GitHub\ejm118_INFSCI1017\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-3275614542.index
-331096929.index
-1438851876.index
 1917435415.index
-320369202.index
-3361224024.index
+103622133.index
 262688213.index

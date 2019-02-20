@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Artist>
+	<artistID> 2</artistID>
+	<firstName>John</firstName>
+	<lastName>Five</lastName>
+	<bandName> Rob Zombie</bandName>
+	<bio> he goes roar</bio>
+</Artist>
