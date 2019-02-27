@@ -72,7 +72,6 @@ public class Song {
 	    try {
 	    	stmt.setString(1, songID);
 			ResultSet rs = stmt.executeQuery(sql);
-
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

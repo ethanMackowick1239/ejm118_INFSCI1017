@@ -57,19 +57,14 @@ public class Artist {
 		this.artistID = artistID;
 		db = new DbUtilities();	
 		
-		String sql = "SELECT first_name, last_name, band_name"
-				+ "FROM artist WHERE (artistID = ?);";
-		PreparedStatement stmt = (PreparedStatement) db.executeAlbumQuery1(sql);
-
+		String sql = "SELECT first_name, last_name, band_name FROM artist WHERE artist_id = '" + this.artistID + "';";
 	    try {
-	    	stmt.setString(1, artistID);
-			ResultSet rs = stmt.executeQuery(sql);
-
+			ResultSet rs = db.getResultSet(sql);
+			System.out.println(rs);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	    System.out.println(sql);
 	    
 	}
 	
