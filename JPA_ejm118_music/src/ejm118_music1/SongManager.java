@@ -6,6 +6,8 @@ import javax.persistence.Persistence;
 
 public class SongManager {
 
+	
+	//Creates new song instance in database with the parameters
 	public void CreateSong(String songID, String title, int length, String filePath, String releaseDate, String recordDate)
 	{
 		EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("JPA_ejm118_music_Artist");
@@ -33,6 +35,7 @@ public class SongManager {
 		emFactory.close();
 	}
 	
+	//Updates artist row using the songId and then fill it with the parameters
 	public void updateArtist(String songID, String title, int length, String filePath, String releaseDate, String recordDate)
 	{
 		EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("JPA_ejm118_music_Artist");
@@ -70,6 +73,7 @@ public class SongManager {
 		emFactory.close();
 	}
 	
+	//deletes an album instance in the database using songID
 	public void deleteArtist(String songID)
 	{
 		EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("JPA_ejm118_music_Artist");

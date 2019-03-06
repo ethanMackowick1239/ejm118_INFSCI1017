@@ -11,16 +11,29 @@ public class musicTest {
 
 	public static void main(String[] args) 
 	{
+		//showcases the artist methods
+		artistManager am = new artistManager();
+		am.CreateArtist("9", "Daisy Chain", "Jam");
+		am.CreateArtist("10", "Daisy Chain", "Jam");
+		am.updateArtist("10", "Led Zeppelin", "rock");
+		am.deleteArtist("9");
+		
+		//showcases the song methods
+		SongManager sm = new SongManager();
+		sm.CreateSong("9", "Lines", 10, "Who cares", "2019-8-10", "2019-5-22");
+		sm.CreateSong("10", "Lines", 10, "Who cares", "2019-8-10", "2019-5-22");
+		sm.updateArtist("10",  "Red", 10, "Who cares", "2019-8-10", "2019-5-22");
+		sm.deleteArtist("9");
+		
+		//Showcases the album methods
+		AlbumManager amm = new AlbumManager();
+		amm.CreateAlbum("13", "Oh my, Satan", "2019-02-16", "SCDC", 8);
+		amm.CreateAlbum("14", "Oh my, Satan", "2019-02-16", "SCDC", 8);
+		amm.updateAlbum("14", "Take it Easy", "2019-02-16", "SCDC", 8);
+		amm.deleteAlbum("13");
+
 	
-//		artistManager am = new artistManager();
-//		am.CreateArtist("3", "Daisy Chain", "Jam");
-//			AlbumManager amm = new AlbumManager();
-//	amm.CreateAlbum("3", "Oh my, Satan", "2019-02-16", "SCDC", 8);
-	
-	SongManager sm = new SongManager();
-		//sm.CreateSong("2", "Lines", 10, "Who cares", "2019-8-10", "2019-5-22");
-		//sm.updateArtist("2",  "Red", 10, "Who cares", "2019-8-10", "2019-5-22");
-		sm.deleteArtist("2");
+		
 		
 		
 	}

@@ -6,6 +6,8 @@ import javax.persistence.Persistence;
 
 public class AlbumManager {
 	
+	
+	//Creates new album instance in database with the parameters
 	public void CreateAlbum(String albumID, String title, String releaseDate, String recordingCompanyName, int numberOfTracks)
 	{
 		EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("JPA_ejm118_music_Artist");
@@ -32,13 +34,15 @@ public class AlbumManager {
 		emFactory.close();
 	}
 	
+	
+	//Updates artist row using the albumId and then fill it with the parameters
 	public void updateAlbum(String albumID, String title, String releaseDate, String recordingCompanyName, int numberOfTracks)
 	{
 		EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("JPA_ejm118_music_Artist");
 		EntityManager em = emFactory.createEntityManager();
 		em.getTransaction().begin();
 		
-		Album a = em.find(Album.class, 23);
+		Album a = em.find(Album.class, albumID);
 		
 		if(!title.equals(""))
 		{
@@ -69,13 +73,14 @@ public class AlbumManager {
 		emFactory.close();
 	}
 	
+	//deletes an album instance in the database using albumID
 	public void deleteAlbum(String albumID)
 	{
 		EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("JPA_ejm118_music_Artist");
 		EntityManager em = emFactory.createEntityManager();
 		em.getTransaction().begin();
 		
-		Artist a = em.find(Artist.class, albumID);
+		Album a = em.find(Album.class, albumID);
 	
 		em.remove(a);
 	    em.getTransaction().commit();
