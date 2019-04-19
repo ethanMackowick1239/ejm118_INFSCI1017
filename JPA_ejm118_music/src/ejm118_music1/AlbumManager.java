@@ -89,5 +89,18 @@ public class AlbumManager {
 		em.close();
 		emFactory.close();
 	}
+	
+	public Album getAlbum(String albumID)
+	{
+		EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("JPA_ejm118_music_Artist");
+		EntityManager em = emFactory.createEntityManager();
+		em.getTransaction().begin();
+		
+		Album g = em.find(Album.class,  albumID);
+		
+		em.close();
+		emFactory.close();
+		return g;
+	}
 
 }
